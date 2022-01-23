@@ -4,7 +4,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -24,22 +23,32 @@ public class Driver {
 
     public static WebDriver getDriver() {
         if (driver == null) {
-            ChromeOptions handlingSSL = new ChromeOptions();
+
             String browser = ConfReader.getConf("browser");
             switch (browser) {
                 case "chrome":
-                    handlingSSL.setAcceptInsecureCerts(true);
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver(handlingSSL);
+                    driver = new ChromeDriver();
+                    break;
+                case "chrome-ssl":
+                    WebDriverManager.chromedriver().setup();
+                    ChromeOptions optionsC = new ChromeOptions();
+                    optionsC.setAcceptInsecureCerts(true);
+                    driver = new ChromeDriver(optionsC);
                     break;
                 case "chrome-headless":
-                    handlingSSL.setAcceptInsecureCerts(true);
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver(ChromeDriverService.createServiceWithConfig(handlingSSL), new ChromeOptions().setHeadless(true));
+                    driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
+                    break;
+                case "firefox-ssl":
+                    WebDriverManager.firefoxdriver().setup();
+                    FirefoxOptions optionsF = new FirefoxOptions();
+                    optionsF.setAcceptInsecureCerts(true);
+                    driver = new FirefoxDriver(optionsF);
                     break;
                 case "firefox-headless":
                     WebDriverManager.firefoxdriver().setup();
