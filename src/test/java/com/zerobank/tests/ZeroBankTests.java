@@ -1,5 +1,6 @@
 package com.zerobank.tests;
 
+import com.zerobank.pages.AccountActivityPage;
 import com.zerobank.pages.AccountSummaryPage;
 import com.zerobank.pages.LoginPage;
 import org.testng.annotations.Test;
@@ -24,6 +25,10 @@ public class ZeroBankTests extends ZeroBankTestBase{
         zbUser.accountSummaryPage();
         zbUser.accountTypesCheck();
         zbUser.creditAccounts();
+
+        AccountActivityPage zbActivity = new AccountActivityPage();
+        zbActivity.userAccountActivity();
+
 
     }
 }
