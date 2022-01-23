@@ -11,20 +11,20 @@ Login Feature
     - When user tries to login with invalid information, error message “Login and/or password are wrong.” should be displayed.[DONE]
 
 Account summary Feature
-    - Account summary page should have the title Zero – Account summary.
-    - Account summary page should have to following account types:
+    - Account summary page should have the title Zero – Account summary. [DONE]
+    - Account summary page should have to following account types: [DONE]
     --- Cash Accounts,
     --- Investment Accounts,
     --- Credit Accounts,
-    ----- Credit Accounts table must have columns
+    ----- Credit Accounts table must have columns [DONE]
     -------- Account,
     -------- Credit Card,
     -------- Balance.
     --- Loan Accounts.
 
 Account Activity Feature
-    - Account Activity page should have the title Zero – Account activity.
-    - In the Account drop down default option should be Savings.
+    - Account Activity page should have the title Zero – Account activity. [DONE]
+    - In the Account drop down default option should be Savings. [DONE]
     - Account drop down should have the following options:
     --- Savings,
     --- Checking,
