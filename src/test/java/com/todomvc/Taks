@@ -1,0 +1,9 @@
+The Web Application under test https://todomvc.com/
+The first step should be to load the website,
+    click within the JavaScript tab,
+    and select the Polymer link.
+The second step should be:
+    Add two Todo items
+
+Bonus: (optional stretch goal):
+    Edit the content of the second Todo item

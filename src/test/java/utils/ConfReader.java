@@ -8,6 +8,9 @@ import java.util.Properties;
  * @author esalkan
  * @project TestAutomationTasks
  */
+/**
+ * reads the properties file configuration.properties
+ */
 public class ConfReader {
     private static Properties properties;
 
