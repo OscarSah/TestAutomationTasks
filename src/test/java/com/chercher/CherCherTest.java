@@ -81,10 +81,30 @@ public class CherCherTest {
 
         // 3. Explicitly wait until the button is enabled
         WebElement disabledButton = driver.findElement(By.id("disable"));
-        wait = new WebDriverWait(driver,Duration.ofSeconds(5));
+        wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(disabledButton));
 
         // 4. Then verify the button is enabled
         Assert.assertTrue(disabledButton.isEnabled(), "Verify that : The Disabled button is enabled");
+    }
+
+    /**
+     * Task3:
+     *  1. Go to https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver
+     *  2. Click on "Display button after 10 seconds"
+     *  3. Explicitly wait until the button is displayed
+     *  4. Then verify the button is displayed
+     */
+    @Test
+    public void explicitlyWaitDisplayOtherButtonTest(){
+        // 2. Click on "Display button after 10 seconds"
+        WebElement displayButton = driver.findElement(By.id("display-other-button"));
+        displayButton.click();
+
+        // 3. Explicitly wait until the button is displayed
+        WebElement hiddenButton = driver.findElement(By.id("hidden"));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("hidden")));
+        Assert.assertTrue(hiddenButton.isDisplayed(),"Verify that : Hidden button is displayed");
     }
 }
