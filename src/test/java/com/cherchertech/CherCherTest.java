@@ -1,23 +1,18 @@
-package com.chercher;
+package com.cherchertech;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import utils.Driver;
 import utils.WebDriverFactory;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author esalkan
@@ -107,4 +102,31 @@ public class CherCherTest {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("hidden")));
         Assert.assertTrue(hiddenButton.isDisplayed(),"Verify that : Hidden button is displayed");
     }
+
+    /**
+     * Task4:
+     *  1. Go to https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver
+     *  2. Click on "Change Text to Selenium Webdriver"
+     *  3. Wait until in place of  "Site" text,  become "Selenium Webdriver".
+     *  4. Verify this : "Site" text changed to "Selenium Webdriver".
+     */
+
+    @Test
+    public void explicitlyWaitTextChangeTest(){
+        // 2. Click on "Change Text to Selenium Webdriver"
+        WebElement changeTextButton = driver.findElement(By.id("populate-text"));
+        changeTextButton.click();
+
+        String expectedText = "Selenium Webdriver";
+        String actualText =  driver.findElement(By.id("h2")).getText();
+
+        // 3. Wait until in place of  "Site" text,  become "Selenium Webdriver".
+        wait = new WebDriverWait(driver,Duration.ofSeconds(11));
+        wait.until(ExpectedConditions.textToBe(By.id("h2"),"Selenium Webdriver"));
+
+        // 4. Verify this : "Site" text changed to "Selenium Webdriver".
+        Assert.assertNotEquals(actualText,expectedText,"Verify this : \"Site\" text changed to \"Selenium Webdriver\".");
+
+    }
+
 }
