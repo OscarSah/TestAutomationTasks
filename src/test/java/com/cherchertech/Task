@@ -25,6 +25,6 @@ Task4:
 Task5:
     1. Go to https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver
     2. Verify this : check-box is not checked.
-    2. Click on "Check Checkbox after 10 seconds"
-    3. Wait until check-box is checked.
-    4. Verify this : check-box is checked.
+    3. Click on "Check Checkbox after 10 seconds" Button
+    4. Wait until check-box is checked.
+    5. Verify this : check-box is checked.

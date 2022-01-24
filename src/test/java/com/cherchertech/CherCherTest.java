@@ -24,7 +24,7 @@ public class CherCherTest {
     WebDriverWait wait; // Creating wait
 
     @BeforeMethod
-    public void setUp(){ // Set-up
+    public void setUp() { // Set-up
         driver = WebDriverFactory.getDriver("chrome"); // assign to the driver chrome browser
         driver.manage().window().maximize(); // maximize to browser window
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5)); // waiting elements load
@@ -34,16 +34,16 @@ public class CherCherTest {
     }
 
     @AfterMethod
-    public void tearDown(){
+    public void tearDown() {
         driver.close(); // Close the driver after each test methods.
     }
 
     /**
      * Task1:
-     *  1. Go to https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver
-     *  2. Click on "Click me, to Open an alert after 5 seconds"
-     *  3. Explicitly wait until alert is present
-     *  4. Then handle the Javascript alert
+     * 1. Go to https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver
+     * 2. Click on "Click me, to Open an alert after 5 seconds"
+     * 3. Explicitly wait until alert is present
+     * 4. Then handle the Javascript alert
      */
 
     @Test
@@ -53,7 +53,7 @@ public class CherCherTest {
         clickMeButton.click();
 
         // 3. Explicitly wait until alert is present
-        wait = new WebDriverWait(driver,Duration.ofSeconds(5));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.alertIsPresent());
 
         // 4. Then handle the Javascript alert
@@ -63,20 +63,20 @@ public class CherCherTest {
 
     /**
      * Task2:
-     *  1. Go to https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver
-     *  2. Click on "Enable button after 10 seconds"
-     *  3. Explicitly wait until the button is enabled
-     *  4. Then verify the button is enabled
+     * 1. Go to https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver
+     * 2. Click on "Enable button after 10 seconds"
+     * 3. Explicitly wait until the button is enabled
+     * 4. Then verify the button is enabled
      */
     @Test
-    public void explicitlyWaitEnableButtonTest(){
+    public void explicitlyWaitEnableButtonTest() {
         // 2. Click on "Enable button after 10 seconds" Button
         WebElement enableButton = driver.findElement(By.id("enable-button"));
         enableButton.click();
 
         // 3. Explicitly wait until the button is enabled
         WebElement disabledButton = driver.findElement(By.id("disable"));
-        wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(disabledButton));
 
         // 4. Then verify the button is enabled
@@ -85,13 +85,13 @@ public class CherCherTest {
 
     /**
      * Task3:
-     *  1. Go to https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver
-     *  2. Click on "Display button after 10 seconds"
-     *  3. Explicitly wait until the button is displayed
-     *  4. Then verify the button is displayed
+     * 1. Go to https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver
+     * 2. Click on "Display button after 10 seconds"
+     * 3. Explicitly wait until the button is displayed
+     * 4. Then verify the button is displayed
      */
     @Test
-    public void explicitlyWaitDisplayOtherButtonTest(){
+    public void explicitlyWaitDisplayOtherButtonTest() {
         // 2. Click on "Display button after 10 seconds"
         WebElement displayButton = driver.findElement(By.id("display-other-button"));
         displayButton.click();
@@ -100,32 +100,57 @@ public class CherCherTest {
         WebElement hiddenButton = driver.findElement(By.id("hidden"));
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("hidden")));
-        Assert.assertTrue(hiddenButton.isDisplayed(),"Verify that : Hidden button is displayed");
+        Assert.assertTrue(hiddenButton.isDisplayed(), "Verify that : Hidden button is displayed");
     }
 
     /**
      * Task4:
-     *  1. Go to https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver
-     *  2. Click on "Change Text to Selenium Webdriver"
-     *  3. Wait until in place of  "Site" text,  become "Selenium Webdriver".
-     *  4. Verify this : "Site" text changed to "Selenium Webdriver".
+     * 1. Go to https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver
+     * 2. Click on "Change Text to Selenium Webdriver"
+     * 3. Wait until in place of  "Site" text,  become "Selenium Webdriver".
+     * 4. Verify this : "Site" text changed to "Selenium Webdriver".
      */
     @Test
-    public void explicitlyWaitTextChangeTest(){
+    public void explicitlyWaitTextChangeTest() {
         // 2. Click on "Change Text to Selenium Webdriver"
         WebElement changeTextButton = driver.findElement(By.id("populate-text"));
         changeTextButton.click();
 
         String expectedText = "Selenium Webdriver";
-        String actualText =  driver.findElement(By.id("h2")).getText();
+        String actualText = driver.findElement(By.id("h2")).getText();
 
         // 3. Wait until in place of  "Site" text,  become "Selenium Webdriver".
-        wait = new WebDriverWait(driver,Duration.ofSeconds(11));
-        wait.until(ExpectedConditions.textToBe(By.id("h2"),"Selenium Webdriver"));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(11));
+        wait.until(ExpectedConditions.textToBe(By.id("h2"), "Selenium Webdriver"));
 
         // 4. Verify this : "Site" text changed to "Selenium Webdriver".
-        Assert.assertNotEquals(actualText,expectedText,"Verify this : \"Site\" text changed to \"Selenium Webdriver\".");
+        Assert.assertNotEquals(actualText, expectedText, "Verify this : \"Site\" text changed to \"Selenium Webdriver\".");
 
     }
 
+    /**
+     * Task5:
+     * 1. Go to https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver
+     * 2. Verify this : check-box is not checked.
+     * 3. Click on "Check Checkbox after 10 seconds" Button
+     * 4. Wait until check-box is checked.
+     * 5. Verify this : check-box is checked.
+     */
+    @Test
+    public void explicitlyWaitCheckBoxTest() {
+        // 2. Verify this : check-box is not checked.
+        WebElement checkBox = driver.findElement(By.id("ch"));
+        Assert.assertFalse(checkBox.isSelected(), "Verify this : check-box is NOT checked.");
+
+        // 3. Click on "Check Checkbox after 10 seconds" Button
+        WebElement checkBoxButton = driver.findElement(By.id("checkbox"));
+        checkBoxButton.click();
+
+        // 4. Wait until check-box is checked.
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeSelected(checkBox));
+
+        // 5. Verify this : check-box is checked.
+        Assert.assertTrue(checkBox.isSelected(), "Verify this : check-box is checked.");
+    }
 }
