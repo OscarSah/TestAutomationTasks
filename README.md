@@ -1,6 +1,5 @@
 # Some Simple Test Automation Tasks
-
-## >This repo contains some example Test Automation Tasks for beginners.
+> This repo contains some example Test Automation Tasks for beginners.
 
 ### Dependencies
 [Java Faker v1.0.2](https://mvnrepository.com/artifact/com.github.javafaker/javafaker)
