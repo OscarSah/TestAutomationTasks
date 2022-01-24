@@ -110,7 +110,6 @@ public class CherCherTest {
      *  3. Wait until in place of  "Site" text,  become "Selenium Webdriver".
      *  4. Verify this : "Site" text changed to "Selenium Webdriver".
      */
-
     @Test
     public void explicitlyWaitTextChangeTest(){
         // 2. Click on "Change Text to Selenium Webdriver"
