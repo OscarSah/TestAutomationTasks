@@ -1,7 +1,7 @@
-# Some Simple Test Automation Tasks
-> ### This repo contains some example Test Automation Tasks for beginners.
+# Test Automation Example Tasks
+> ## This repository contains some sample testing tasks for those who are interested.
 
-### Dependencies
+> ### pom.xml Dependencies
 [Java Faker v1.0.2](https://mvnrepository.com/artifact/com.github.javafaker/javafaker)<br>
 [Selenium Java v3.141.59](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java)<br>
 [Web Driver Manager v5.0.3](https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager)<br>
