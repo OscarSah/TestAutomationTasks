@@ -1,14 +1,14 @@
 # Test Automation Example Tasks
-> ## This repository contains some sample testing tasks for those who are interested.
+> ## This repository contains some sample testing tasks for those who are interested. New tasks and scenarios will be added and developed over the time...
 
-> ### pom.xml Dependencies
-[Java Faker v1.0.2](https://mvnrepository.com/artifact/com.github.javafaker/javafaker)<br>
-[Selenium Java v3.141.59](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java)<br>
-[Web Driver Manager v5.0.3](https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager)<br>
-[TestNG v7.1.0](https://mvnrepository.com/artifact/org.testng/testng/7.1.0)<br>
-[POI v4.1.2](https://mvnrepository.com/artifact/org.apache.poi/poi)<br>
-[POI-OOXML v4.1.2](https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml)<br>
-[Lombok vRELEASE](https://mvnrepository.com/artifact/org.projectlombok/lombok)<br>
+> ## pom.xml Dependencies
+> - [Java Faker v1.0.2](https://mvnrepository.com/artifact/com.github.javafaker/javafaker)<br>
+> - [Selenium Java v3.141.59](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java)<br>
+> - [Web Driver Manager v5.0.3](https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager)<br>
+> - [TestNG v7.1.0](https://mvnrepository.com/artifact/org.testng/testng/7.1.0)<br>
+> - [POI v4.1.2](https://mvnrepository.com/artifact/org.apache.poi/poi)<br>
+> - [POI-OOXML v4.1.2](https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml)<br>
+> - [Lombok vRELEASE](https://mvnrepository.com/artifact/org.projectlombok/lombok)<br>
 
 ### CherCherTech Test Tasks Examples
 1. [Task List](https://github.com/esalkan/TestAutomationTasks/blob/master/src/test/java/com/cherchertech/Task)<br>
