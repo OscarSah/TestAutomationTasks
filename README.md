@@ -22,10 +22,10 @@
 
 
 <details>
-  <summary><h2>Basic Navigation Test Task Example</h2></summary>
+  <summary><strong>Basic Navigation Test Task Example</strong></summary>
   <ol>
     <li>
-      <a href="#">Task List</a><br>
+      <a href="#">Task List</a>
     </li>
     <li>
       <a href="https://github.com/esalkan/TestAutomationTasks/tree/master/src/test/java/com/basicNavTest/utilities">Task Utils</a>
@@ -38,7 +38,7 @@
 
 
 <details>
-  <summary><h2> Binance BTC/USDT Average Calculate Task</h2></summary>
+  <summary><strong> Binance BTC/USDT Average Calculate Task</strong></summary>
   <ol>
     <li>
       <a href="https://github.com/esalkan/TestAutomationTasks/blob/master/src/test/java/com/binance/Task">Task List</a><br>
