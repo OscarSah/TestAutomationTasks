@@ -20,23 +20,31 @@
 2. [Pages](https://github.com/esalkan/TestAutomationTasks/tree/master/src/test/java/com/zerobank/pages)<br>
 3. [Tests](https://github.com/esalkan/TestAutomationTasks/tree/master/src/test/java/com/zerobank/tests)<br>
 
-### Basic Navigation Test Task Example
-1. [Task List]()<br>
-2. [Task Utils](https://github.com/esalkan/TestAutomationTasks/tree/master/src/test/java/com/basicNavTest/utilities)<br>
-3. [Tests](https://github.com/esalkan/TestAutomationTasks/blob/master/src/test/java/com/basicNavTest/NavTest.java)<br>
 
-
-
+<details>
+  <summary><h2>Basic Navigation Test Task Example</h2></summary>
+  <ol>
+    <li>
+      <a href="#">Task List</a><br>
+    </li>
+    <li>
+      <a href="https://github.com/esalkan/TestAutomationTasks/tree/master/src/test/java/com/basicNavTest/utilities">Task Utils</a>
+    </li>
+    <li>
+      <a href="https://github.com/esalkan/TestAutomationTasks/blob/master/src/test/java/com/basicNavTest/NavTest.java">Test Class</a>
+    </li>
+  </ol>
+</details>
 
 
 <details>
-  <summary>### Binance BTC/USDT Average Calculate Task</summary>
+  <summary><h2> Binance BTC/USDT Average Calculate Task</h2></summary>
   <ol>
     <li>
-      1.[Task List](https://github.com/esalkan/TestAutomationTasks/blob/master/src/test/java/com/binance/Task)<br>
+      <a href="https://github.com/esalkan/TestAutomationTasks/blob/master/src/test/java/com/binance/Task">Task List</a><br>
     </li>
     <li>
-      2.[Tests](https://github.com/esalkan/TestAutomationTasks/blob/master/src/test/java/com/binance/BtcUsdt.java)
+      <a href="https://github.com/esalkan/TestAutomationTasks/blob/master/src/test/java/com/binance/BtcUsdt.java">Test Class</a>
     </li>
   </ol>
 </details>
